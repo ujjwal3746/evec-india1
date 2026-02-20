@@ -1,0 +1,17 @@
+const services = [
+    { title: "Cloud Infrastructure", desc: "Scalable server solutions." },
+    { title: "Edge Computing", desc: "Low-latency data processing." },
+    { title: "AI Integration", desc: "Custom machine learning workflows." }
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.getElementById('service-grid');
+    if (grid) {
+        grid.innerHTML = services.map(s => `
+            <div class="card">
+                <h3>${s.title}</h3>
+                <p>${s.desc}</p>
+            </div>
+        `).join('');
+    }
+});
